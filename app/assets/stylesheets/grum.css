@@ -1,0 +1,88 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400|Roboto:300);
+body {
+  background: #728895;
+  font-family: Roboto;
+  color: cornsilk;
+}
+
+textarea {
+  width: 500px;
+  height: 150px;
+}
+
+.grumble {
+  width: 50%;
+  border: 1px solid rgba(120, 120, 120, 0.1);
+  border-top: 5px solid indianred;
+  /* Webkit (Safari/Chrome) */
+  -webkit-box-shadow: 2px 2px 40px 4px rgba(0, 0, 0, 0.3);
+  margin: 10px auto;
+  text-align: left;
+  background: rgba(120, 120, 120, 0.1);
+}
+.grumble img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.grumble span {
+  font-size: 20px;
+  font-weight: 200;
+  color: cornsilk;
+  cursor: pointer;
+}
+.grumble span:hover {
+  font-weight: 300;
+  color: indianred;
+}
+
+header img {
+  float: left;
+  z-index: -10;
+  position: relative;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, .75);
+  width: 75%;
+  height: 75%;
+  position: fixed;
+  top: 12.5%;
+  left: 12.5%;
+  display: none;
+}
+
+.modal .cancel {
+  float: right;
+  margin: 20px 20px 0 0;
+}
+
+.grumble-form {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  margin: 5px auto;
+  border-top: 5px solid coral;
+  background: #787878;
+}
+.grumble-form input {
+  height: 45px;
+  width: 20%;
+  background: cornsilk;
+}
+.grumble-form span {
+  color: cornsilk;
+  cursor: pointer;
+}
+
+.add-grumble {
+  position: fixed;
+  top: 100px;
+  right: 80px;
+  border: 2px solid coral;
+  padding: 5px;
+  cursor: pointer;
+}

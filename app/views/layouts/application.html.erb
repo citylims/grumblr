@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GrumblrApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+  <img src="https://camo.githubusercontent.com/613bc7eb2a28483a252a45946af877f7034a919d/687474703a2f2f692e696d6775722e636f6d2f554a38747232412e6a7067">
+  </header>
+
+
+<div id='grumble-form-modal' class="modal">
+    <span class="cancel">[x]</span>
+    <div class="grumble-form">
+      <form>
+        <input type="text" name="title" placeholder="title">
+        <input type="text" name="content" placeholder="content">
+        <input type="text" name="author" placeholder="author">
+        <input type="text" name="avatar" placeholder="avatar">
+        <span class="new-grumble">GRUMBLE</span>
+      </form>
+    </div>
+  </div>
+
+<div id='grumble-list'>
+  <div class='add-grumble'>Add Grumble</div>
+</div>
+
+
+<%= yield %>
+
+
+<%= javascript_include_tag 'application' %>
+
+<script type="text/x-handlebars-template" id="grumble-template">
+  <div id={{id}}>
+    <img src="{{avatar}}" alt="">
+    <h5>{{title}} | <span class="author">{{author}}</span></h5>
+    <p>{{content}}</p>
+    <span class='show'>Show</span>
+    <span class='destroy'>Delete</span>
+    <span class='edit'>Edit</span>
+  </div>
+</script>
+<script type="text/x-handlebars-template" id="edit">
+  <form>
+    <input type="text" name="title" placeholder="title" value='{{title}}'>
+    <textarea type="text" name="content" placeholder="content" value='{{content}}'></textarea>
+    <input type="text" name="author" placeholder="author" value='{{author}}'>
+    <input type="text" name="avatar" placeholder="avatar" value='{{avatar}}'>
+    <span class='update'>Update</span>
+  </form>
+<script>
+</body>
+</html>
